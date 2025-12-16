@@ -4,5 +4,56 @@
 .products {
     img{
     width: 100px;
+    gap: 30px;
 }
 }
+.fservices{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.avis{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.avantage{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.menu{
+    display: flex;
+    justify-content: right;
+    gap: 25px;
+    text-decoration: none;
+    list-style: none;
+    
+}
+.ben{
+    justify-content: center;
+    text-align: center;
+    
+}
+.prod{
+    justify-content: center;
+    text-align: center;
+
+}
+.ser{
+    justify-content: center;
+    text-align: center;
+
+}
+.tem{
+    justify-content: center;
+    text-align: center;
+}
+.menu2{
+     display: block;
+    justify-content: right;
+    text-decoration: none;
+    list-style: none;
+}
+

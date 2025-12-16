@@ -21,7 +21,7 @@ fetch(API_URL)
 
         const beneficesContainer =
             document.getElementById("benefices");
-        data.beneficescontainer;
+        // data.beneficescontainer;
         const produits =
             document.getElementById("produits");
 
@@ -34,10 +34,24 @@ fetch(API_URL)
             document.getElementById("témoignages");
         data.avantagesClients;
 
+       const hero = document.getElementById("titreHero"); 
+        data.phraseAccroche; 
+        console.log();
+
+        const texteAppelAction = document.getElementById("slogan");
+        data.slogan ; 
+
+        const button = document.getElementById (" button");
+        data.button ; 
+        
+
 
         console.log();
         //  créer mon html sur JS 
         // boucle pour produits 
+
+
+
 
         data.produits.forEach(produit => {
             const card = document.createElement("div");
@@ -99,14 +113,14 @@ fetch(API_URL)
 
 
 
-            data.avantagesClients.forEach(elementAvantages => {
-                const cardAv = document.createElement("div");
-                cardAv.textContent = elementAvantages;
-                beneficesContainer.appendChild(cardAv);
-
-            })
-
         })
+            data.avantagesClients.forEach(avantages => {
+                const card_autre = document.createElement("div");
+                card_autre.textContent = avantages;
+                beneficesContainer.appendChild(card_autre);
+
+            });
+
     })
 
 
