@@ -29,20 +29,20 @@ fetch(API_URL)
             document.getElementById("Services");
         data.services;
 
-
-        const avantagesClients =
-            document.getElementById("témoignages");
-        data.avantagesClients;
-
-       const hero = document.getElementById("titreHero"); 
-        data.phraseAccroche; 
-        console.log();
+    
+    //    const hero = document.getElementById("titreHero"); 
+    //     hero.textContent = data.nomCommercial; 
+    //     console.log();
 
         const texteAppelAction = document.getElementById("slogan");
-        data.slogan ; 
+     texteAppelAction.textContent =data.phraseAccroche ; 
 
-        const button = document.getElementById (" button");
-        data.button ; 
+        const button = document.getElementById ("button");
+        button.textContent = data.texteAppelAction ; 
+        const avantagesClients =
+            document.getElementById("témoignages");
+        // hero.textContent = avantagesClients;
+
         
 
 
