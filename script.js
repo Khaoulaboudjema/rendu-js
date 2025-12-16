@@ -1,4 +1,7 @@
 // recupérer les données json
+
+
+
 // on utilise fetch
 const API_URL = `https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/sneakers.json`;
 
@@ -7,38 +10,103 @@ fetch(API_URL)
     .then(data => {
         console.log('Données récupérées:', data);
 
-// récuperer les id
-       const nomentreprise= 
-        document.getElementById("logo");
+        // récuperer les id
+        const nomentreprise =
+            document.getElementById("logo");
+        data.nomentreprise;
 
         const slogan =
-        document.getElementById("slogan"); 
-       
-        const beneficescontainer = 
-        document.getElementById ("benefices"); 
+            document.getElementById("slogan");
+        data.slogan;
 
-        const produits = 
-        document.getElementById ("produits");
+        const beneficesContainer =
+            document.getElementById("benefices");
+        data.beneficescontainer;
+        const produits =
+            document.getElementById("produits");
 
-        const Services= 
-        document. getElementById("Services");
-
-        const clients= 
-        document. getElementById("témoignages");
-        
-        console.log( );
-        
+        const services =
+            document.getElementById("Services");
+        data.services;
 
 
+        const avantagesClients =
+            document.getElementById("témoignages");
+        data.avantagesClients;
+
+
+        console.log();
+        //  créer mon html sur JS 
+        // boucle pour produits 
+
+        data.produits.forEach(produit => {
+            const card = document.createElement("div");
+
+            console.log(produit.nom);
+            const nomArtcile = document.createElement("h4");
+            nomArtcile.textContent = produit.nom;
+            console.log(nomArtcile);
+
+            const description = document.createElement("p");
+            description.textContent = produit.description;
+
+            const image = document.createElement("img");
+            image.src = produit["image-url"];
+
+
+            card.appendChild(image);
+            card.appendChild(nomArtcile);
+            card.appendChild(description);
+            produits.appendChild(card);
+
+
+        });
+
+        data.services.forEach(service => {
+            const card = document.createElement("div");
+
+            console.log(service.nom);
+            const nom = document.createElement("h5");
+            nom.textContent = service.nom;
+            console.log(nom);
+
+            const description = document.createElement("p");
+            description.textContent = service.description;
+
+            card.appendChild(nom);
+            card.appendChild(description);
+            services.appendChild(card);
+
+        })
+        data.temoignages.forEach(temoignage => {
+            const card = document.createElement("div");
+
+            console.log(temoignage.prenom);
+            const prenom = document.createElement("h5");
+            prenom.textContent = temoignage.prenom;
+            console.log(prenom);
+
+            const typeExperience = document.createElement("p");
+            typeExperience.textContent = temoignage.typeExperience;
+
+            const commentaire = document.createElement("p");
+            commentaire.textContent = temoignage.commentaire;
+
+            card.appendChild(prenom);
+            card.appendChild(typeExperience);
+            card.appendChild(commentaire);
+            avantagesClients.appendChild(card);
 
 
 
+            data.avantagesClients.forEach(elementAvantages => {
+                const cardAv = document.createElement("div");
+                cardAv.textContent = elementAvantages;
+                beneficesContainer.appendChild(cardAv);
 
+            })
+
+        })
     })
-    .catch(error => console.error('Erreur lors de la récupération des données :', error));
-
-
-
-
 
 
