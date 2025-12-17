@@ -30,9 +30,9 @@ fetch(API_URL)
         data.services;
 
     
-    //    const hero = document.getElementById("titreHero"); 
-    //     hero.textContent = data.nomCommercial; 
-    //     console.log();
+       const hero = document.getElementById("titreHero"); 
+        hero.textContent = data.nomCommercial; 
+        
 
         const texteAppelAction = document.getElementById("slogan");
      texteAppelAction.textContent =data.phraseAccroche ; 
