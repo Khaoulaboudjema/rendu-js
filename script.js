@@ -55,6 +55,7 @@ fetch(API_URL)
 
         data.produits.forEach(produit => {
             const card = document.createElement("div");
+            card.classList.add("card");
 
             console.log(produit.nom);
             const nomArtcile = document.createElement("h4");
