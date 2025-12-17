@@ -4,8 +4,21 @@
 .products {
     img{
     width: 100px;
-    gap: 40px;
+    gap: 60px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    
 }
+}
+
+body{
+background-color: #1f6f78 ; 
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .fservices{
     display: flex;
@@ -19,6 +32,7 @@
     text-align: center;
     justify-content: center;
     margin: 80px 0 ;
+    gap: 35px;
 }
 .avantage{
     display: flex;
@@ -27,15 +41,17 @@
     margin: 80px 0;
 }
 .menu{
+    
     display: flex;
     justify-content: right;
+    a{
     gap: 25px;
     padding: 20px;
     text-decoration: none;
     list-style: none;
     color: white;
     
-    
+    }
     
 }
 .ben{
@@ -46,56 +62,90 @@
 .prod{
     justify-content: center;
     text-align: center;
+    gap: 40px;
+    margin-top: 30px;
 
+}
+.pr{
+    margin-top: 100px;
 }
 .ser{
     justify-content: center;
     text-align: center;
+    margin-top: 50px;
 
+}
+.fservices{
+    gap: 35px;
 }
 .tem{
     justify-content: center;
     text-align: center;
+    gap: 35px;
+    margin-top: 35px;
 }
+
 .menu2{
      display: flex;
     flex-direction: column;
+    a{
     text-decoration: none;
     list-style: none;
     gap: 10px;
     text-align: right;
+     
+
+    }
+}
+ul{
+    list-style: none;
+     font-family: "DM Sans", sans-serif;
 }
 .hero1{
     text-align: center;
     padding: 80px 20px;
-    background-color: #1f6f78 ; 
     color: rgb(248, 247, 247);
     font-family: "DM Sans", sans-serif;
+     background-color: #1f6f78 ; 
 
 
 }
 button{
     display: inline-block;
-    padding: 10px 16px;
+    padding: 20px 16px;
     border: none;
     color: white;
     background-color: rgb(165, 163, 163);
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 30px;
     
 
 }
 .hero2{
     margin: 80px 0 ;
     text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+ 
+
+}
+h1{
+    color: rgb(253, 253, 253);
+    font-family: "Inter", sans-serif;
 }
 .site-footer{
     padding: 80px 60px 40px;
       font-family: "DM Sans", sans-serif;
-      background-color: #1f6f78;
+
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
+
+
 
 
 
